@@ -1,0 +1,13 @@
+%form{ :action => "/create", :method => "post"}
+	%li
+		%label{:for => "title"} Title:
+		%input{:type => "text", :name => "title", :class => "text"}
+	%li
+		%label{:for => "location"} Google Spreadsheet Location:
+		%input{:type => "text", :name => "location", :class => "text"}
+	%input{:type => "submit", :value => "Send", :class => "button"}
+
+- for timeline in @timelines
+	%p <a href="/timeline">
+	=timeline.title
+	
